@@ -1,0 +1,30 @@
+ALGORITHM tri_par_insertion
+FUNCTION tri_insertion(tab, taille: INTEGER) : return_type
+VAR
+    i,j,elem : INTEGER
+BEGIN
+    FOR i FROM 1 TO taille DO
+        elem := tab[i]
+        FOR j FROM i TO (j>0) && (tab[j-1])  DO
+            tab[j]= tab[j-1]
+            tab[j]=elem
+        END_FOR
+    END_FOR
+    RETURN tab[j] ;
+END
+
+VAR
+    tableau : ARRAY_OF INTEGER[10];
+    tableau[]
+BEGIN
+    //affichage avant la tri
+    FOR i FROM 0 TO 10  DO
+        Write(tableau[i])
+    END_FOR
+    // affichage après la tri
+    tri_insertion(tableau,10);
+    FOR i FROM 0 TO 10  DO
+        Write(tableau[i])
+    END_FOR
+    
+END
